@@ -6,6 +6,7 @@ import ServicesPage from './pages/ServicesPage'
 import ShopPage from './pages/ShopPage'
 import BlogPage from './pages/BlogPage'
 import ContactPage from './pages/ContactPage'
+import PracticeAreaPage from './pages/PracticeAreaPage'
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/practice/:slug" element={<PracticeAreaPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

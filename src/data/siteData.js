@@ -109,13 +109,83 @@ export const testimonials = [
   },
 ]
 
-export const practiceLinks = [
-  'Criminal Law',
-  'Corporate Law',
-  'Family Law',
-  'Real Estate Law',
-  'Civil Litigation',
+export const practiceAreas = [
+  {
+    slug: 'criminal-law',
+    label: 'Criminal Law',
+    short:
+      'Strategic defense representation for investigations, charges, bail, and trial matters.',
+    overview:
+      'Our criminal defense team builds proactive legal strategy from first notice through final resolution, with focus on rights protection and evidence scrutiny.',
+    points: [
+      'Case analysis and charge evaluation at initial stage',
+      'Bail hearings, procedural defense, and motion practice',
+      'Evidence review and cross-examination strategy',
+      'Negotiation and trial-focused representation',
+    ],
+  },
+  {
+    slug: 'corporate-law',
+    label: 'Corporate Law',
+    short:
+      'Business-first legal support for contracts, governance, risk, and commercial decisions.',
+    overview:
+      'We advise startups and established businesses on day-to-day legal decisions, transaction structuring, compliance, and dispute prevention.',
+    points: [
+      'Commercial contracts and policy drafting',
+      'Corporate governance and board advisory',
+      'M&A due diligence and negotiation support',
+      'Regulatory compliance and risk mitigation',
+    ],
+  },
+  {
+    slug: 'family-law',
+    label: 'Family Law',
+    short:
+      'Clear and respectful legal guidance in custody, divorce, and family settlement matters.',
+    overview:
+      'Family matters require legal precision and emotional sensitivity. We provide practical representation with focus on fair outcomes and long-term stability.',
+    points: [
+      'Divorce and settlement structuring',
+      'Child custody and guardianship representation',
+      'Maintenance and financial arrangement planning',
+      'Mediation support and contested hearings',
+    ],
+  },
+  {
+    slug: 'real-estate-law',
+    label: 'Real Estate Law',
+    short:
+      'Legal support for property transactions, title review, and real-estate dispute handling.',
+    overview:
+      'From purchase agreements to dispute resolution, our team safeguards property interests through document precision and strategic legal action.',
+    points: [
+      'Sale deed, lease, and transaction documentation',
+      'Title verification and compliance review',
+      'Property dispute and possession litigation',
+      'Commercial and residential advisory',
+    ],
+  },
+  {
+    slug: 'civil-litigation',
+    label: 'Civil Litigation',
+    short:
+      'Result-focused representation for contractual, commercial, and civil court disputes.',
+    overview:
+      'We represent clients in civil claims with rigorous preparation, procedural strength, and a courtroom strategy aligned with business and personal goals.',
+    points: [
+      'Claim assessment and legal notice drafting',
+      'Pleadings, filings, and procedural compliance',
+      'Interim relief and injunction strategy',
+      'Settlement negotiation and trial representation',
+    ],
+  },
 ]
+
+export const practiceLinks = practiceAreas.map((area) => ({
+  label: area.label,
+  to: `/practice/${area.slug}`,
+}))
 
 export const quickLinks = [
   { label: 'About Us', to: '/about' },

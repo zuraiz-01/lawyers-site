@@ -22,14 +22,8 @@ function SiteFooter({ practiceLinks, quickLinks }) {
           <h4>Practice Areas</h4>
           <ul>
             {practiceLinks.map((item) => (
-              <li key={item}>
-                <a
-                  href={`mailto:info@lexovia.com?subject=${encodeURIComponent(
-                    `${item} Consultation`,
-                  )}`}
-                >
-                  {item}
-                </a>
+              <li key={item.label}>
+                <Link to={item.to}>{item.label}</Link>
               </li>
             ))}
           </ul>
