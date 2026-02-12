@@ -10,6 +10,12 @@
 
 ---
 
+## 🌐 Live Demo
+
+- https://lexovia.netlify.app/
+
+---
+
 ## ✨ Highlights
 
 - ⚛️ **React 19 + Vite 7** setup with fast builds
